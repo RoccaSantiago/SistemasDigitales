@@ -1,0 +1,141 @@
+TALLER CIRCUITOS SECUENCIALES
+EJ 1 
+a) El circuito se compone de compuertas las cuales regulan el fluyo hacia un bus principal 
+b) Color azul: no hay conexion -> no pasa corriente
+   Color verde claro: hay señal activa
+   Color rojo: error, deberia y no deberia haber señal -> corto circuito
+   Color verde oscuro: no hay señal activa 
+c) Verificar que si la compuerta esta abiertas o todas las señales esten apagadas o todas las señales esten prendidas
+   Que haya una sola compuerta abierta a la vez
+d) Cuando hay mas de una abierta pero no le estan pasandfo señales
+CHECK
+
+EJ 2
+a) clk es el clock que puede estar activo (1) o no activo (0)
+   reg_in es la entrada / el valor que va a ser almacenado o no
+   w es el write enable que establece si se activa el guardado (1) o no (0)
+   en_out es el enable out que establece como esta el registro en el estado actual
+   reg_debug nos muestra el registro almacenado
+   reg_output recibe el bit almacenado en caso de que en_out este activado
+   force_input es la entrada / el valor que va a ser almacenado o no
+   en_Force_Input hace que el circuito devuelva 1 independiente del valor del clock y de las otras variables de control, si activado
+   R0 nos muestra el registro almacenado
+   R1 nos muestra el registro almacenado
+   R2 nos muestra el registro almacenado
+Las entradas consideradas como de control deben ser clk, w y en_out
+b) force_inpout = 1
+   en_force_input = 1
+   clk = 1
+   w1 = 1
+resto = 0
+c)  en_force_input = 1
+    force_input= 1
+    w0 = 1 
+   clk = 1
+   clk = 0
+    en_force_input = 0 -> inhabilitamos la entrada para trabajar coin el valor almacenado
+    enable_out0 = 1     -> habilitamos salida 
+    wo = 0
+    w1 = 1
+   clk = 1
+   clk = 0
+    w1 = 0
+    enable_out0 = 0
+    enable_out2 = 1 
+    w0 = 1 
+   clk = 1
+   clk = 0
+    w0 = 0 
+    enable_out2 = 0
+    enable_out1 = 1
+    w2 = 1
+   clk = 1
+   clk = 0
+    w2 = 0
+    enable_out1 = 0
+
+
+EJ 3 
+a) clk clock
+   alu_a_write es el comando de control que establece si se escribe o no
+   alu_b_write es el comando de control que establece si se escribe o no
+   op es el comando de control que define que operacion se realiza (suma 00 resta 01)
+   alu_enable_out comando se registra o no 
+   n es negativo 
+   v es overflow 
+   c es acareo
+   z si es cero
+b) Cada display de registro muestra que numero se guarda en cada registro en forma decimal
+   Cada display de la ALU muestra el registro de los inputs 
+   El último display muestra el el output de la ALU
+c) force_input = 0100
+   force_input_enable = 1
+   reg2_write = 1
+  clk = 1
+  clk = 0
+   en_force_input = 0
+   reg2_write = 0
+   force_input = 1101
+   en_force_input = 1 
+   reg3_write = 1
+  clk = 1
+  clk = 0
+   en_force_input = 0 
+   reg3_write = 0
+  clk = 1
+  clk = 0
+d) 1) a) force_input = 0100
+         force_input_enable = 1
+         reg0_write = 1
+        clk = 1
+        clk = 0
+         en_force_input = 0
+         reg0_write = 0
+         force_input = 0000
+         en_force_input = 1 
+         reg1_write = 1
+        clk = 1
+        clk = 0
+         en_force_input = 0 
+         reg1_write = 0
+        clk = 1
+        clk = 0
+         op = 11
+         reg0_enable_out = 1
+         alu_a_write = 1
+        clk = 1
+        clk = 0 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+    
+    
+ 
+
+   
