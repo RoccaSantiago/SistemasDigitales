@@ -94,17 +94,40 @@ d) 1) a) force_input = 0100
          force_input = 0000
          en_force_input = 1 
          reg1_write = 1
-        clk = 1
-        clk = 0
+      clk = 1
+      clk = 0
          en_force_input = 0 
          reg1_write = 0
-        clk = 1
-        clk = 0
+      clk = 1
+      clk = 0
          op = 11
          reg0_enable_out = 1
          alu_a_write = 1
-        clk = 1
-        clk = 0 
+      clk = 1
+      clk = 0 
+         reg0_enable_out = 0
+         alu_a_write = 0
+      clk = 1
+      clk = 0 
+         OP = 11
+         ALU_enableout = 1
+         reg2_write = 1
+      clk = 1
+      clk = 0
+         ALU_enableout = 0
+         reg2_write = 0
+      clk = 1
+      clk = 0
+         OP = 01
+         ALU_enableout = 1
+         reg3_write = 1
+      clk = 1
+      clk = 0
+         ALU_enableout = 0
+         reg3_write = 0
+
+e) Se niega el clock para no permitir la salida al mismo que la entrada. Ya que en el flanco positivo del clock acepta las entradas la ALU, mientras que el negativo devuelve la salida con todo el circuito ya ejecutado.
+         
    
    
    
